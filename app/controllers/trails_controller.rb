@@ -1,5 +1,5 @@
-class TrailsController < ApplicationController
-  before_action :set_trail, only: [:show, :update, :destroy]
+class TrailsController < ProtectedController
+  before_action :set_trail, only: [:update, :destroy]
 
   # GET /trails
   def index
@@ -10,12 +10,13 @@ class TrailsController < ApplicationController
 
   # GET /trails/1
   def show
+    @trail = Trail.find(params[:id])
     render json: @trail
   end
 
   # POST /trails
   def create
-    @trail = Trail.new(trail_params)
+    @trail = current_user.trails.build(trail_params)
 
     if @trail.save
       render json: @trail, status: :created, location: @trail
