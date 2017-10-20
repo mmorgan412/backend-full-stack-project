@@ -1,5 +1,5 @@
 class TrailsController < ProtectedController
-  before_action :set_trail, only: [:update, :destroy]
+  before_action :set_trail, only: [:update, :destroy, :show]
 
   # GET /trails
   def index
@@ -11,6 +11,7 @@ class TrailsController < ProtectedController
   # GET /trails/1
   def show
     @trail = Trail.find(params[:id])
+
     render json: @trail
   end
 
