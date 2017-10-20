@@ -37,6 +37,8 @@ class TrailsController < ProtectedController
   # DELETE /trails/1
   def destroy
     @trail.destroy
+
+    head :no_content
   end
 
   private
