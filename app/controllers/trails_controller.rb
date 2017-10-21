@@ -3,7 +3,7 @@ class TrailsController < ProtectedController
 
   # GET /trails
   def index
-    @trails = Trail.all
+    @trails = current_user.trails.all
 
     render json: @trails
   end
