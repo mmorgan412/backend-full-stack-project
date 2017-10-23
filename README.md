@@ -21,6 +21,16 @@ README
     A backend API, using Ruby on Rails, was used for interatcting with a database.
     Github and Heroku host the site.
 
+### Trail Actions
+
+| Verb   | URI Pattern         | Controller#Action    |
+|--------|---------------------|----------------------|
+| GET    | `/trails`           |    `trails#index`    |
+| GET    | `/trails/id `       |  `trails #yoursongs` |
+| PATCH  | `/trails/id `       |  `trails#update`     |
+| DELETE | `/trails/id `       |   `trails#destroy`   |
+| POST   | `/trails`           |   `trails#create`    |
+
 
 ## Unsolved Problems
   Would like to add more functionality to query the database by mountain, difficulty or rating.
