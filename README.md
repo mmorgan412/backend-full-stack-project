@@ -21,6 +21,16 @@ README
     A backend API, using Ruby on Rails, was used for interatcting with a database.
     Github and Heroku host the site.
 
+### User Actions
+
+| Verb   | URI Pattern            | Controller#Action    |
+|--------|------------------------|----------------------|
+| POST   | `/sign-up`             |    `users#signup`    |
+| POST   | `/sign-in `            |  `users#signin`      |
+| PATCH  | `/change-password/:id `|  `users#changepw`    |
+| DELETE | `/sign/out/:id `       |   `users#signout`    |
+
+
 ### Trail Actions
 
 | Verb   | URI Pattern         | Controller#Action    |

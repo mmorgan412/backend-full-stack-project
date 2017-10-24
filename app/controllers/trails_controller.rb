@@ -11,7 +11,7 @@ class TrailsController < ProtectedController
 
     render json: @trails
   end
-end
+  end
 
   # GET /trails/1
   def show
