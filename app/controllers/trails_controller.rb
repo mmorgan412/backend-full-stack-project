@@ -1,12 +1,17 @@
 class TrailsController < ProtectedController
   before_action :set_trail, only: [:update, :destroy, :show]
 
-  # GET /trails
   def index
+  @trails = current_user.trails.all
+  if params[:rating]
+    @trails = current_user.trails.search(params[:rating])
+    render json: @trails
+  else
     @trails = current_user.trails.all
 
     render json: @trails
   end
+end
 
   # GET /trails/1
   def show

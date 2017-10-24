@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
   resources :users, only: %i[index show]
+  # search '/trails/rating' => 'trails#search'
 end
